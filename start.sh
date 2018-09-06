@@ -1,3 +1,3 @@
 #!/bin/bash
 [ -f .env ] && source .env
-babel-node src/cli.js $@
+babel-watch src/cli.js $@
