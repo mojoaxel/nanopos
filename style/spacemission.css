@@ -1,0 +1,15 @@
+body .container {
+	max-width: 100%;
+	background-color: black;
+	background-image: url(./spacemission.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body .container .buttons {
+	margin-top: 45%;
+}
+
+.btn.pay .amount {
+	font-size: large;
+}

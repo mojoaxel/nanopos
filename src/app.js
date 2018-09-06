@@ -30,6 +30,7 @@ app.use(require('csurf')({ cookie: true }))
 app.get('/', (req, res) => res.render('index.pug', { req, items }))
 
 app.use('/bootswatch', require('express').static(path.resolve(require.resolve('bootswatch/package'), '..', 'dist')))
+app.use('/style', require('express').static(path.resolve('./style')))
 
 // use pre-compiled browserify bundle when available, or live-compile for dev
 const compiledBundle = path.join(__dirname, 'client.bundle.min.js')

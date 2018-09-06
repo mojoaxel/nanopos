@@ -7,17 +7,17 @@ html.h-100
   meta(name='csrf', content=req.csrfToken())
   meta(name='apple-mobile-web-app-capable', content='yes')
   link(rel='stylesheet', href='bootswatch/'+settings.theme+'/bootstrap.min.css')
+  link(rel='stylesheet', href='style/spacemission.css')
 
   body.h-100
-    .container.d-flex.h-100: .justify-content-center.align-self-center.text-center.mx-auto.w-100
-
-      h1.mb-4= settings.title
+    .container.d-flex.h-100: .buttons.justify-content-center.align-self-center.text-center.mx-auto.w-100
 
       .row
         for item, itemid in items
-          .col-sm-4.mb-3
-            h3= item.title
-            button.btn.btn-secondary(data-buy-item=itemid) Buy for #{ formatFiat(item.price) }
+          .col
+            button.btn.pay.btn-secondary(data-buy-item=itemid) 
+              h3= item.title
+              .amount #{ formatFiat(item.price) }
 
       unless settings.noCustomAmount
         .row.mt-4: .col-md-4.offset-md-4.col-sm-6.offset-sm-3
