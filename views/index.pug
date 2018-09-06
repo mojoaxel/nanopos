@@ -19,7 +19,7 @@ html.h-100
             h3= item.title
             button.btn.btn-secondary(data-buy-item=itemid) Buy for #{ formatFiat(item.price) }
 
-      if settings.allowCustomAmount
+      unless settings.noCustomAmount
         .row.mt-4: .col-md-4.offset-md-4.col-sm-6.offset-sm-3
           h3 Something else
           form(data-buy): .input-group
