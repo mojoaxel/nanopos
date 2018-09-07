@@ -10,9 +10,12 @@ html.h-100
   link(rel='stylesheet', href='style/spacemission.css')
 
   body.h-100
-    .container.d-flex.h-100: .buttons.justify-content-center.align-self-center.text-center.mx-auto.w-100
+    .container.d-flex.h-100: .justify-content-center.align-self-center.text-center.mx-auto.w-100.h-100
 
-      .row
+      h1.title.flux.mb-4= settings.title
+      h2.subtitle.neon.mb-4 Lightning
+
+      .row.buttons
         for item, itemid in items
           .col
             button.btn.pay.btn-secondary(data-buy-item=itemid) 
