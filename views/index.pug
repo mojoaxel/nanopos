@@ -9,11 +9,11 @@ html.h-100
   link(rel='stylesheet', href='bootswatch/'+settings.theme+'/bootstrap.min.css')
   link(rel='stylesheet', href='style/spacemission.css')
 
-  body.h-100
+  body
     .container.d-flex.h-100: .justify-content-center.align-self-center.text-center.mx-auto.w-100.h-100
 
       h1.title.flux.mb-4= settings.title
-      h2.subtitle.neon.mb-4 Lightning
+      h2.subtitle.neon.mb-4 Bitcoin Lightning
 
       .row.buttons
         for item, itemid in items

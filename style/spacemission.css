@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade|Monoton');
 
 @font-face {
-  font-family: neon;
-  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+	font-family: neon;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
 body .container {
@@ -11,12 +11,14 @@ body .container {
 	background-image: url(./spacemission.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	box-shadow: inset 0px 0px 15px 5px black;
+	min-height: -webkit-fill-available;
 }
 
 body .container .title {
 	color: white;
 	font-size: 50px;
-	margin-top: 75px;
+	margin-top: 50px;
 	/*font-family: 'Bungee Shade', cursive;*/
 	font-family: 'Monoton', cursive;
 }
@@ -28,15 +30,46 @@ body .container .subtitle {
 	margin-bottom: 0px !important;
 }
 
+body .container .subtitle:before,
+body .container .subtitle:after {
+	content: '⚡';
+	font-size: 25px;
+	opacity: 0.7;
+}
+
+
 body .container .buttons {
-	margin-top: 45px;
+  margin: 20px 0px 15px 0px;
+}
+
+body .container .buttons .col {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .btn.pay {
-	width: 100%;
-	border-radius: 25px;
+	width: 120px;
+  height: 100px;
+	background: black;
+	color: white;
 	box-shadow: 0px 0px 10px 5px deepskyblue;
+	padding: 5px;
+  border: none;
 }
+
+body .container .buttons .col:nth-child(1) .btn.pay {
+	color: yellow;
+	box-shadow: inset 0px 0px 30px 5px yellow;
+}
+body .container .buttons .col:nth-child(2) .btn.pay {
+	color: deepskyblue;
+	box-shadow: inset 0px 0px 30px 5px deepskyblue;
+}
+body .container .buttons .col:nth-child(3) .btn.pay {
+	color: red;
+	box-shadow: inset 0px 0px 30px 5px red;
+}
+
 
 .btn.pay .amount {
 	font-size: large;
@@ -49,6 +82,28 @@ body .container .buttons {
 
 
 
+.flux {
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+@keyframes flux {
+  0%, 100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
 
 .neon {
   font-family: neon;
@@ -56,49 +111,18 @@ body .container .buttons {
   font-size: 9vw;
   line-height: 9vw;
   text-shadow: 0 0 3vw #F40A35;
-}
 
-.flux {
-  /*font-family: neon;*/
-  color: #426DFB;
-  font-size: 9vw;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356FF;
-}
-
-.neon {
   animation: neon 2s ease infinite;
   -moz-animation: neon 2s ease infinite;
   -webkit-animation: neon 2s ease infinite;
 }
-
 @keyframes neon {
-  0%,
-  100% {
+  0%, 100% {
     text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
     color: #FED128;
   }
   50% {
     text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
     color: #806914;
-  }
-}
-
-.flux {
-  animation: flux 2s linear infinite;
-  -moz-animation: flux 2s linear infinite;
-  -webkit-animation: flux 2s linear infinite;
-  -o-animation: flux 2s linear infinite;
-}
-
-@keyframes flux {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
-  }
-  50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
   }
 }
